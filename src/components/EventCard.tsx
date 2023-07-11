@@ -21,8 +21,8 @@ export const EventCard: React.FC<EventCardProps> = ({
       <AspectRatio ratio={4 / 3} width="full">
         <Image
           src={imageSrc ? imageSrc : '/assets/default-event-image.png'}
-          layout='fill'
-          objectFit='cover'
+          layout="fill"
+          objectFit="cover"
           alt="Solidity event image"
         />
       </AspectRatio>
