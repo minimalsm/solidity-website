@@ -1,8 +1,9 @@
-import { Box, Flex, Icon, Image, Spacer, Text } from '@chakra-ui/react'
+import { AspectRatio, Box, Flex, Icon, Spacer, Text } from '@chakra-ui/react'
 import type { FlexProps } from '@chakra-ui/react'
 import { ButtonLink } from '@/components'
 import type { EventFrontmatter } from '@/interfaces'
 import { MdPlayArrow } from 'react-icons/md'
+import Image from 'next/image'
 
 interface EventCardProps extends FlexProps {
   frontmatter: EventFrontmatter
@@ -17,14 +18,14 @@ export const EventCard: React.FC<EventCardProps> = ({
   const date = `${start.toLocaleDateString()} - ${end.toLocaleDateString()}`
   return (
     <Flex direction="column" maxW="container.md" {...flexProps} h="100%">
-      <Image
-        src={imageSrc ? imageSrc : '/assets/default-event-image.png'}
-        h="200px"
-        minH="200px"
-        w="full"
-        objectFit="cover"
-        alt="Solidity event image"
-      />
+      <AspectRatio ratio={4 / 3} width="full">
+        <Image
+          src={imageSrc ? imageSrc : '/assets/default-event-image.png'}
+          layout='fill'
+          objectFit='cover'
+          alt="Solidity event image"
+        />
+      </AspectRatio>
       <Flex direction="column" px={0} pt={4} gap={2} h="full">
         <Text textStyle="h5-mono" color="text">
           {title}
