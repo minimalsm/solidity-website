@@ -3,7 +3,7 @@ import type { FlexProps } from '@chakra-ui/react'
 import { ButtonLink } from '@/components'
 import type { EventFrontmatter } from '@/interfaces'
 import { MdPlayArrow } from 'react-icons/md'
-import Image from 'next/image'
+import Image from '../components/CustomImage'
 
 interface EventCardProps extends FlexProps {
   frontmatter: EventFrontmatter
