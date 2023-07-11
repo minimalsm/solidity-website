@@ -18,7 +18,7 @@ export const EventCard: React.FC<EventCardProps> = ({
   return (
     <Flex direction="column" maxW="container.md" {...flexProps} h="100%">
       <Image
-        src={imageSrc ? imageSrc : './assets/default-event-image.png'}
+        src={imageSrc ? imageSrc : '/assets/default-event-image.png'}
         h="200px"
         minH="200px"
         w="full"
