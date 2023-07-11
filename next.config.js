@@ -4,8 +4,8 @@ const nextConfig = {
   output: 'standalone',
   experimental: { esmExternals: true },
   images: { unoptimized: true },
-  basePath: '/solidity-website/',
-  assetPath: './'
+  basePath: '/solidity-website',
+  assetPath: './',
 }
 
 const removeImports = require('next-remove-imports')()
